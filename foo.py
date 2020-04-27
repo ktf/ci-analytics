@@ -36,9 +36,9 @@ def get_report(analytics):
         'reportRequests': [
         {
           'viewId': VIEW_ID,
-          'dateRanges': [{'startDate': '1daysAgo', 'endDate': 'today'}],
-          'metrics': [{'expression': 'ga:sessions'}],
-          'dimensions': [{'name': 'ga:country'}]
+          'dateRanges': [{'startDate': '7daysAgo', 'endDate': 'today'}],
+          'metrics': [{'expression': 'ga:avgUserTimingValue'}],
+          'dimensions': [{'name': 'ga:userTimingCategory'}, {'name': 'ga:userTimingLabel'}]
         }]
       }
   ).execute()
